@@ -9,7 +9,8 @@ fg = FeedGenerator()
 fg.load_extension('podcast')
 fg.podcast.itunes_category('Technology')
 fg.logo('https://edgecollective.io/podcast/pod.png')
-
+fg.podcast.itunes_image('https://edgecollective.io/podcast/pod.png')
+fg.podcast.itunes_author('Edge Collective')
 with open('podcast_meta.yaml') as f:
     
     data = yaml.load(f, Loader=yaml.FullLoader)
