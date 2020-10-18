@@ -7,7 +7,7 @@ import os
 
 fg = FeedGenerator()
 fg.load_extension('podcast')
-fg.podcast.itunes_category('Technology', 'Podcasting')
+fg.podcast.itunes_category('Technology')
 fg.logo('https://edgecollective.io/podcast/pod.png')
 
 with open('podcast_meta.yaml') as f:
