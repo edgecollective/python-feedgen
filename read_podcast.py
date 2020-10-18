@@ -23,6 +23,7 @@ for filename in glob.glob('episodes/*.yaml'):
        fe = fg.add_entry()
        data = yaml.load(f, Loader=yaml.FullLoader)
        fe.id(data['id'])
+       fe.title(data['title'])
        fe.description(data['description'])
        fe.enclosure(data['id'],0,data['format'])
        fe.published(data['date'])
