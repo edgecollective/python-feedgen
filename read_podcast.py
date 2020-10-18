@@ -8,7 +8,7 @@ import os
 fg = FeedGenerator()
 fg.load_extension('podcast')
 fg.podcast.itunes_category('Technology', 'Podcasting')
-
+fg.logo('https://edgecollective.io/podcast/pod.png')
 
 with open('podcast_meta.yaml') as f:
     
@@ -25,6 +25,7 @@ for filename in glob.glob('episodes/*.yaml'):
        fe.id(data['id'])
        fe.description(data['description'])
        fe.enclosure(data['id'],0,data['format'])
+       fe.published(data['date'])
 
 fg.rss_str(pretty=True)
 fg.rss_file('podcast.xml')
